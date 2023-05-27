@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+    <div class="panel-heading">{{element.name}}</div>
+    <div class="panel-body">
+        <p>
+            <strong *ngIf="element.type === 'server'">{{element.contant}}</strong>
+            <em *ngIf="element.type === 'blueprint'">{{element.contant}}</em>
+        </p>
+    </div>
+    <div class="panel-footer">
+      <span [ngClass]="element.operation === 'delete'?'deleteoperation':element.operation === 'update'?'updateoperation':'disableoperation'">{{element.operation | uppercase}}</span>
+    </div>
+</div>
